@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Jakub Starterkit JS</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#" onclick="navigatorScript.showWelcome()">
+                        Start
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="navigatorScript.showCalculatorPage()">Calculator</a>
+                </li>
+                <li>
+                    <a href="#" onclick="jsonHandler.loadJsons();navigatorScript.showJsonRequestPage()">Request4JSON</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2>We have a sidebar navigation</h2>
+                        <!--<p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
+                        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p> -->
+						<p>(And a button to hide/show menu.)</p>
+                        <a href="#menu-toggle" class="btn btn-primary" id="menu-toggle">Toggle Menu</a>
+                    </div>
+                </div>
+				<section id="calculator">
+					<div class="row">
+						<div class="col-xs-5">
+							<div class="form-group">
+								<label for="numberA" class="control-label">Field for the first number</label>
+								<input id="numberA" type="number" class="form-control" />
+							</div>
+						</div>
+						<div class="col-xs-5">
+							<div class="form-group">
+								<label for="numberB" class="control-label">Field for the second number</label>
+								<input id="numberB" type="number" class="form-control" />
+							</div>
+						</div>
+						<div class="col-xs-2">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-5">
+							<div class="form-group">
+								<label for="result" class="control-label">Results are supposed to appear on the right.</label>
+							</div>
+						</div>
+						<div class="col-xs-5">
+							<div class="form-group">
+								<input id="result" type="number" class="form-control" disabled="disabled" />
+							</div>
+						</div>
+						<div class="col-xs-2">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-10">
+							<div class="form-group">
+								<button class="btn btn-success" onclick="calc.load();calc.add();calc.printResult()">Add</button>
+								<button class="btn btn-success" onclick="calc.load();calc.subtract();calc.printResult()">Subtract</button>
+								<button class="btn btn-success" onclick="calc.load();calc.multiply();calc.printResult()" >Multiply</button>
+								<button class="btn btn-success" onclick="calc.load();calc.divide();calc.printResult()">Divide</button>
+								<button class="btn btn-success" onclick="calc.load();calc.factorial();calc.printResult()">Factorial</button>
+								<button class="btn btn-warning" onclick="calc.clearFields()">Clear</button>
+							</div>
+						</div>
+						<div class="col-xs-2">
+						</div>
+					</div>
+				</section>
+				<section id="jsonRequest">
+				</section>				
+			</div>	
+		</div>
+    </div>
+    <!-- /#wrapper -->
+	
+	<!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- My Scripts -->
+	<script src="js/navigatorScript.js"></script>
+	<script src="js/calc.js"></script>
+	<script src="js/jsonHandler.js"></script>
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>

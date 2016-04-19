@@ -1,0 +1,30 @@
+[
+	{
+		"id": 0,
+		"name": "Count",
+		"surname": "Dracula",
+		"title": "Dracula",
+		"appeared": 1931
+	},
+	{
+		"id": 1,
+		"name": "Jason",
+		"surname": "Voorhes",
+		"title": "Friday the 13th",
+		"appeared": 1980
+	},
+    {
+        "id": 2,
+		"name": "Freddy",
+		"surname": "Krueger",
+		"title": "A Nightmare on Elm Street",
+		"appeared": 1984
+    },
+	{
+        "id": 3,
+		"name": "Elliott",
+		"surname": "\"Pinhead\" Spencer",
+		"title": "Hellraiser",
+		"appeared": 1987
+    }
+]
